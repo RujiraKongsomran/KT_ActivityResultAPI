@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+    private fun chooseImageFile() {
+        val request = PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
+        launcher.launch(request)
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
