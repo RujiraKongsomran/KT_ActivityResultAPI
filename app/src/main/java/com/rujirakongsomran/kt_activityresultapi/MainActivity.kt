@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 //
 //        }
     private val launcher: ActivityResultLauncher<PickVisualMediaRequest> =
-        registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri: Uri? ->
+        registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(4)) { uris: List<Uri>? ->
 
         }
 
@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         binding.btnSelect.setOnClickListener {
 //            getContent.launch("image/*")
+            chooseImageFile()
         }
 //        setContentView(R.layout.activity_main)
     }
